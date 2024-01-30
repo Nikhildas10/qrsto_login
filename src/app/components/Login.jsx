@@ -110,7 +110,7 @@ const Login = () => {
         </div>
       </div>
         <p className="text-[10px]  text-center text-gray-400">
-          2022 © QRfy, Spain - 'QR Code' is a trademark of DENSO WAVE INCORPORATED
+          2022 © QRfy, Spain - QR Code is a trademark of DENSO WAVE INCORPORATED
         </p>
     
     </div>
