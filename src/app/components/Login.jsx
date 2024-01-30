@@ -6,16 +6,16 @@ const Login = () => {
   const [isShow, setIsShow] = useState(false);
 
   return (
-    <div className="sm:w-[70%] w-[100%] overflow-hidden  p-10 ">
-      <div className="h-full flex justify-center flex-col items-center">
-        <div className="mt:10">
+    <div className="sm:w-[70%] w-[100%] overflow-hidden xl:h-screen p-10 pb-14 ">
+      <div className="h-full flex  flex-col items-center">
+        <div className="flex pb-0 flex-col gap-5">
+        <div className="">
           <h1 className="text-2xl font-bold text-blue-600 mb-10">QRFY</h1>
-          <h2 className="font-semibold text-2xl mb-2 24 ">Welcome back !</h2>
-          <p className="text-[#717171] w-72 mb-10">
+          <h2 className="font-[700] text-[23px] mb-2">Welcome back!</h2>
+          <p className="text-[#717171] w-72 mb-5">
             Enter with your networks or complete your data
           </p>
         </div>
-        <div className="flex  flex-col gap-6">
           <div className="flex  gap-4">
             <button
               className="px-8 py-3 rounded-3xl border-solid border-2 border-gray-200 hover:border-blue-600 hover:bg-slate-50"
@@ -57,7 +57,7 @@ const Login = () => {
             onMouseLeave={() => setIsActive(false)}
             className={`flex w-[300px] border-2 border-solid ${
               isActive ? "hover:border-blue-600" : "hover:border-gray-400"
-            } border-gray-200   pl-6 py-3 rounded-3xl`}
+            } border-gray-200   pl-3 py-3 rounded-3xl`}
           >
             <input
               type="text"
@@ -70,7 +70,7 @@ const Login = () => {
             onMouseLeave={() => setIsActive(false)}
             className={`flex w-[300px] border-2 ${
               isActive ? "hover:border-blue-600" : "hover:border-gray-400"
-            } border-solid border-gray-200  pl-6 rounded-3xl`}
+            } border-solid border-gray-200  pl-3 rounded-3xl`}
           >
             <input
               type={isShow ? "text" : "password"}
@@ -80,10 +80,10 @@ const Login = () => {
             />
             <div
               onClick={() => setIsShow(!isShow)}
-              className="hover:bg-gray-100 cursor-pointer  rounded-3xl p-[10px] ml-12"
+              className="hover:bg-gray-100 cursor-pointer  rounded-3xl p-[10px] ml-14"
             >
               <img
-                className="w-[25px] opacity-65"
+                className="w-[25px] opacity-55"
                 title={isShow ? "hide" : "show"}
                 src={
                   isShow
@@ -94,14 +94,14 @@ const Login = () => {
               />
             </div>
           </div>{" "}
-          <p className="text-gray-600 text-[12px] text-center font-semibold">
+          <p className="text-gray-500 text-[11px] text-center font-semibold">
             Have you forgotten your password?{" "}
             <span className="text-blue-600 cursor-pointer">Click here</span>
           </p>
           <button className="bg-blue-600 font-bold text-white px-4 py-3 rounded-3xl">
             Log in
           </button>
-          <p className="text-gray-600 text-[12px] text-center font-semibold">
+          <p className="text-gray-500 text-[11px] text-center font-semibold">
             Dont have an account?{" "}
             <span className="text-blue-600 cursor-pointer">
               Create an account
