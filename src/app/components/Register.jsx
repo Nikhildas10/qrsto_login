@@ -1,25 +1,29 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-
-const Login = () => {
+import zxcvbn from "zxcvbn";
+const Register = () => {
   const [isActive, setIsActive] = useState(false);
   const [isShow, setIsShow] = useState(false);
-
+  const [password, setPassword] = useState("");
+  console.log(password);
+  const testPasswrd = zxcvbn(password);
+  // console.log(testPasswrd.score);
   return (
-    <div className="sm:w-[70%] xl:w-[40%] w-[100%] overflow-hidden xl:h-screen  p-8 pb-14 ">
+    <div className="sm:w-[70%] w-[100%] overflow-hidden bg-white   p-8 pb-14 ">
       <div className="h-full flex xl:justify-center  flex-col items-center">
         <div className="flex pb-0 flex-col gap-5">
           <div className="">
-            <img className="w-[105px] mb-14"
+            <img
+              className="w-[105px] mb-14"
               src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
               alt=""
             />
             <h2 className="font-[700] text-[23px] mb-2 max-w-[295px]">
-              Welcome back!
+              Create account
             </h2>
-            <p className="text-[#717171] w-72 mb-5 max-w-[295px]" >
-              Enter with your networks or complete your data
+            <p className="text-[#717171] w-72 mb-5 max-w-[295px]">
+              It's free and only takes a few seconds.
             </p>
           </div>
           <div className="flex  gap-4">
@@ -67,6 +71,7 @@ const Login = () => {
           >
             <input
               type="text"
+              autoFocus
               onClick={() => setIsActive(true)}
               className="outline-none text-sm w-full"
               placeholder="name@email.com"
@@ -81,6 +86,7 @@ const Login = () => {
             <input
               type={isShow ? "text" : "password"}
               onClick={() => setIsActive(true)}
+              onChange={(e) => setPassword(e.target.value)}
               className="outline-none text-sm w-full max-w-[595px]"
               placeholder="Enter your password here"
             />
@@ -100,28 +106,61 @@ const Login = () => {
               />
             </div>
           </div>{" "}
-          <p className="text-gray-500 text-[11px] text-center font-semibold">
-            Have you forgotten your password?{" "}
-            <Link href={"forgot-password"}><span className="text-blue-600 cursor-pointer">Click here</span></Link>
-          </p>
+          <div className="flex justify-between gap-1 w-full px-5">
+            <div
+              className={`${
+                testPasswrd.score >= 4
+                  ? "bg-green-500"
+                  : testPasswrd.score >= 2
+                  ? "bg-orange-500"
+                  : "bg-red-500"
+              } h-1 w-[100%]`}
+            ></div>
+            <div
+              className={`${
+                testPasswrd.score >= 4
+                  ? "bg-green-500"
+                  : testPasswrd.score >= 2
+                  ? "bg-orange-500"
+                  : "bg-slate-100"
+              } h-1 w-[100%]`}
+            ></div>
+            <div
+              className={`${
+                testPasswrd.score >= 4 ? "bg-green-500" : "bg-slate-100"
+              } h-1 w-[100%]`}
+            ></div>
+            <div
+              className={`${
+                testPasswrd.score >= 4 ? "bg-green-500" : "bg-slate-100"
+              } h-1 w-[100%]`}
+            ></div>
+          </div>
           <button className="bg-blue-600 font-bold text-white px-4 py-3 rounded-3xl">
-            Log in
+            Continue
           </button>
           <p className="text-gray-500 text-[11px] text-center font-semibold">
-            Dont have an account?{" "}
-          <Link href={"register"}>
-              <span className="text-blue-600 cursor-pointer">
-                Create an account
-              </span>
-          </Link>
+            Already have an account?{" "}
+            <Link href={"/"}>
+              <span className="text-blue-600 cursor-pointer">Log in</span>
+            </Link>
           </p>
         </div>
+        <p className="text-gray-400 max-w-[330px] text-[12px] text-start font-semibold mt-5 mb-10">
+          By creating an account, you consent that you have read and agree to
+          our{" "}
+          <span className="text-blue-600 cursor-pointer">
+            terms of use and contracting
+          </span>{" "}
+          and the{" "}
+          <span className="text-blue-600 cursor-pointer">privacy policy.</span>
+        </p>
       </div>
-      <p className="text-[10px]  text-center text-gray-400">
+      <p className="text-[10px]   text-center text-gray-400">
         2022 © QRfy, Spain - QR Code is a trademark of DENSO WAVE INCORPORATED
       </p>
     </div>
   );
 };
 
-export default Login;
+export default Register;
