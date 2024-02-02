@@ -5,14 +5,14 @@ const ForgotPswrd = () => {
   const [isActive, setIsActive] = useState(false);
   const [isShow, setIsShow] = useState(false);
   return (
-    <div className="sm:w-[70%] w-[100%] overflow-hidden xl:h-screen  p-8 pb-14 ">
+    <div className="sm:w-[64%] w-[100%] overflow-hidden xl:h-screen  p-8 pb-14 ">
       <div className="h-full flex xl:justify-center  flex-col items-center">
         <div className="flex pb-0 flex-col gap-5 h-full">
-            <img
-              className="w-[105px] mb-20"
-              src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
-              alt=""
-            />
+          <img
+            className="w-[105px] mb-20"
+            src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
+            alt=""
+          />
           <div className="">
             <h2 className="font-[700] text-[23px] mb-2 max-w-[295px]">
               Recover Password

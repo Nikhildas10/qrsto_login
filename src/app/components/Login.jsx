@@ -7,18 +7,19 @@ const Login = () => {
   const [isShow, setIsShow] = useState(false);
 
   return (
-    <div className="sm:w-[70%] xl:w-[40%] w-[100%] overflow-hidden xl:h-screen  p-8 pb-14 ">
+    <div className="sm:w-[68%] xl:w-[40%] w-[100%]  overflow-hidden xl:h-screen  p-8 pb-14 ">
       <div className="h-full flex xl:justify-center  flex-col items-center">
         <div className="flex pb-0 flex-col gap-5">
           <div className="">
-            <img className="w-[105px] mb-14"
+            <img
+              className="w-[105px] mb-14"
               src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
               alt=""
             />
             <h2 className="font-[700] text-[23px] mb-2 max-w-[295px]">
               Welcome back!
             </h2>
-            <p className="text-[#717171] w-72 mb-5 max-w-[295px]" >
+            <p className="text-[#717171] w-72 mb-5 max-w-[295px]">
               Enter with your networks or complete your data
             </p>
           </div>
@@ -102,18 +103,20 @@ const Login = () => {
           </div>{" "}
           <p className="text-gray-500 text-[11px] text-center font-semibold">
             Have you forgotten your password?{" "}
-            <Link href={"forgot-password"}><span className="text-blue-600 cursor-pointer">Click here</span></Link>
+            <Link href={"forgot-password"}>
+              <span className="text-blue-600 cursor-pointer">Click here</span>
+            </Link>
           </p>
           <button className="bg-blue-600 font-bold text-white px-4 py-3 rounded-3xl">
             Log in
           </button>
           <p className="text-gray-500 text-[11px] text-center font-semibold">
             Dont have an account?{" "}
-          <Link href={"register"}>
+            <Link href={"register"}>
               <span className="text-blue-600 cursor-pointer">
                 Create an account
               </span>
-          </Link>
+            </Link>
           </p>
         </div>
       </div>

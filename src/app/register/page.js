@@ -8,7 +8,7 @@ const page = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setSwiperVisibility(window.innerWidth > 768); 
+      setSwiperVisibility(window.innerWidth > 768);
     };
 
     handleResize();
@@ -18,7 +18,7 @@ const page = () => {
     };
   }, []);
   return (
-    <div className="flex justify-center mainRegister">
+    <div className="flex justify-center mainRegister xl:h-screen">
       <Register />
       {isSwiperVisible && <BgRegister />}
     </div>

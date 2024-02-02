@@ -10,7 +10,7 @@ const Register = () => {
   const testPasswrd = zxcvbn(password);
   // console.log(testPasswrd.score);
   return (
-    <div className="sm:w-[70%] w-[100%] overflow-hidden bg-white   p-8 pb-14 ">
+    <div className="sm:w-[64%] w-[100%] overflow-hidden bg-white   p-8 pb-14 ">
       <div className="h-full flex xl:justify-center  flex-col items-center">
         <div className="flex pb-0 flex-col gap-5">
           <div className="">
@@ -146,7 +146,7 @@ const Register = () => {
             </Link>
           </p>
         </div>
-        <p className="text-gray-400 max-w-[330px] text-[12px] text-start font-semibold mt-5 mb-10">
+        <p className="text-gray-400 max-w-[360px] text-[12px] text-start font-semibold mt-5 mb-10">
           By creating an account, you consent that you have read and agree to
           our{" "}
           <span className="text-blue-600 cursor-pointer">
