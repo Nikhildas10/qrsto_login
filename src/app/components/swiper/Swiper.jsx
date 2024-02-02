@@ -7,6 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
+
+// Import additional Swiper modules
+
+// Rest of your application code
 
 // import required modules
 import {
@@ -25,16 +31,19 @@ const SwiperCarousel = () => {
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
+        centeredSlides={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
+        speed={500}
         effect={"fade"}
+        fadeEffect={{ crossfade: true }}
         pagination={{
           clickable: true,
         }}
+        navigation={true}
         modules={[Pagination, Autoplay, EffectFade, Navigation]}
-        className="mySwiper"
       >
         <SwiperSlide>
           <div className="flex justify-center flex-col items-center h-screen">
