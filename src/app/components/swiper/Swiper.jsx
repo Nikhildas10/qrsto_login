@@ -33,7 +33,7 @@ const SwiperCarousel = () => {
         loop={true}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         speed={500}
@@ -42,7 +42,6 @@ const SwiperCarousel = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
         modules={[Pagination, Autoplay, EffectFade, Navigation]}
       >
         <SwiperSlide>
