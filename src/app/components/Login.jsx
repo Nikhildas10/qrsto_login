@@ -8,11 +8,11 @@ const Login = () => {
 
   return (
     <div className="sm:w-[68%] xl:w-[40%] w-[100%]   overflow-hidden xl:h-screen  px-8 pb-14 ">
-      <div className=" h-full flex xl:justify-center flex-col items-center">
-        <div className="flex pb-12 flex-col gap-5">
+      <div className=" h-full flex xl:justify-center  flex-col items-center">
+        <div className="flex pb-[42px] flex-col gap-5">
           <div className="">
             <img
-              className="w-[105px] mb-[53px]"
+              className="w-[105px] h-[20px] mb-[53px]"
               src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
               alt=""
             />

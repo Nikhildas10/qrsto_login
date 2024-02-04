@@ -11,11 +11,11 @@ const Register = () => {
   // console.log(testPasswrd.score);
   return (
     <div className="sm:w-[64%] w-[100%] overflow-hidden bg-white   p-8 pb-14 ">
-      <div className="h-full flex xl:justify-center  flex-col items-center">
+      <div className="h-full flex   flex-col items-center">
         <div className="flex pb-0 flex-col gap-5">
           <div className="">
             <img
-              className="w-[105px] mb-14"
+              className="w-[105px] h-[20px] mb-14"
               src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
               alt=""
             />
