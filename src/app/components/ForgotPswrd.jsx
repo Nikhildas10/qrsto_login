@@ -7,10 +7,10 @@ const ForgotPswrd = () => {
   return (
     <div className="sm:w-[64%] w-[100%] overflow-hidden xl:h-screen  p-8 pb-12 ">
       <div className="h-full flex xl:justify-center  flex-col items-center">
-        <div className="flex pb-0 mb-[137px] flex-col gap-5 h-full">
+        <div className="flex pb-0 mb-[147px] flex-col justify-center gap-5 h-full">
           <img
             className="w-[105px] h-[20px] mb-20"
-            src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
+            src="https://placehold.co/105x20"
             alt=""
           />
           <div className="">
@@ -45,8 +45,8 @@ const ForgotPswrd = () => {
           </Link>
         </div>
       </div>
-      <p className="text-[10px]  text-center text-gray-400">
-        2022 © QRfy, Spain - QR Code is a trademark of DENSO WAVE INCORPORATED
+      <p className="text-[10px] mt-4 text-center text-gray-400">
+        copyright text here
       </p>
     </div>
   );

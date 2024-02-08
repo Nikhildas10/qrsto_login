@@ -11,12 +11,12 @@ const Register = () => {
   // console.log(testPasswrd.score);
   return (
     <div className="sm:w-[64%] w-[100%] overflow-hidden bg-white   p-8 pb-14 ">
-      <div className="h-full flex   flex-col items-center">
+      <div className="h-full flex 2xl:justify-center  flex-col items-center">
         <div className="flex pb-0 flex-col gap-5">
           <div className="">
             <img
               className="w-[105px] h-[20px] mb-14"
-              src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
+              src="https://placehold.co/105x20"
               alt=""
             />
             <h2 className="font-[700] text-[23px] mb-2 max-w-[295px]">
@@ -156,8 +156,8 @@ const Register = () => {
           <span className="text-blue-600 cursor-pointer">privacy policy.</span>
         </p>
       </div>
-      <p className="text-[10px]   text-center text-gray-400">
-        2022 © QRfy, Spain - QR Code is a trademark of DENSO WAVE INCORPORATED
+      <p className="text-[10px] mt-6  text-center text-gray-400">
+        copyright text here
       </p>
     </div>
   );

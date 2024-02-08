@@ -8,12 +8,12 @@ const Login = () => {
 
   return (
     <div className="sm:w-[68%] xl:w-[40%] w-[100%]   overflow-hidden xl:h-screen  p-8  ">
-      <div className=" h-full flex  flex-col items-center">
-        <div className="flex pb-[59px] flex-col gap-5">
+      <div className=" h-full flex 2xl:justify-center  flex-col items-center">
+        <div className="flex pb-[105px]  flex-col gap-5">
           <div className="">
             <img
               className="w-[105px] h-[20px] mb-[53px]"
-              src="https://qrfy.com/static/media/QRFY_logo.354ed49c1007fadf579081da3f778f06.svg"
+              src="https://placehold.co/105x20"
               alt=""
             />
             <h2 className="font-[700] text-[23px] mb-2 max-w-[295px]">
@@ -121,7 +121,7 @@ const Login = () => {
         </div>
       </div>
       <p className="text-[10px]  text-center text-gray-400">
-        2022 © QRfy, Spain - QR Code is a trademark of DENSO WAVE INCORPORATED
+        copyright text here
       </p>
     </div>
   );
