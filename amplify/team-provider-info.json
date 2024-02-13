@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-qrsto-dev-115943-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423252027:role/amplify-qrsto-dev-115943-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423252027:role/amplify-qrsto-dev-115943-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-qrsto-dev-115943-deployment",
+      "UnauthRoleName": "amplify-qrsto-dev-115943-unauthRole",
+      "StackName": "amplify-qrsto-dev-115943",
+      "StackId": "arn:aws:cloudformation:eu-north-1:637423252027:stack/amplify-qrsto-dev-115943/4addcaa0-ca39-11ee-8c0c-0ed4071d27ec",
+      "AmplifyAppId": "d3ksm2rjjko39f"
+    },
+    "categories": {
+      "auth": {
+        "qrsto093b8071": {}
+      }
+    }
+  }
+}

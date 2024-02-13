@@ -1,10 +1,24 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import { Auth } from "aws-amplify";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 const Login = () => {
   const [isActive, setIsActive] = useState(false);
   const [isShow, setIsShow] = useState(false);
+
+  //authorization
+  const session = useSession();
+  const router = useRouter();
+  // console.log(session);
+  const handleGoogleLogin = async () => {
+    await signIn("google", { callbackUrl: "/landing" });
+    if(session.status==="authenticated"){
+
+      router.push("/landing");
+    }
+  };
 
   return (
     <div className="sm:w-[68%] xl:w-[40%] w-[100%]   overflow-hidden xl:h-screen  p-8  ">
@@ -25,6 +39,7 @@ const Login = () => {
           </div>
           <div className="flex  gap-4">
             <button
+              onClick={() => handleGoogleLogin()}
               className="px-8 py-3 rounded-3xl border-solid border-2 border-gray-200 hover:border-blue-600 hover:bg-slate-50"
               title="google"
             >
